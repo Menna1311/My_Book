@@ -1,5 +1,5 @@
 import 'package:books_remake/core/utils/routes.dart';
-import 'package:books_remake/features/home/views/widgets/book_item.dart';
+import 'package:books_remake/features/home/presentation/views/widgets/book_item.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

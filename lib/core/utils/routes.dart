@@ -1,5 +1,5 @@
-import 'package:books_remake/features/home/views/details_view.dart';
-import 'package:books_remake/features/home/views/home_view.dart';
+import 'package:books_remake/features/home/presentation/views/details_view.dart';
+import 'package:books_remake/features/home/presentation/views/home_view.dart';
 import 'package:books_remake/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 

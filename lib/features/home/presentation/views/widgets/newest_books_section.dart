@@ -1,5 +1,5 @@
 import 'package:books_remake/core/utils/styles.dart';
-import 'package:books_remake/features/home/views/widgets/newest_books_listview.dart';
+import 'package:books_remake/features/home/presentation/views/widgets/newest_books_listview.dart';
 import 'package:flutter/material.dart';
 
 class NewstBooksSection extends StatelessWidget {

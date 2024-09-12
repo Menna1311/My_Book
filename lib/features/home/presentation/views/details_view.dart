@@ -1,4 +1,4 @@
-import 'package:books_remake/features/home/views/widgets/details_view_body.dart';
+import 'package:books_remake/features/home/presentation/views/widgets/details_view_body.dart';
 import 'package:flutter/material.dart';
 
 class DetailsView extends StatelessWidget {
