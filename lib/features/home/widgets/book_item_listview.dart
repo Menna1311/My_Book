@@ -9,12 +9,11 @@ class BookItemListView extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.3,
       child: ListView.builder(
-          padding: EdgeInsets.zero,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.only(right: 24.0),
-              child: const BookItem(),
+            return const Padding(
+              padding: EdgeInsets.only(right: 24.0, left: 24, top: 20),
+              child: BookItem(),
             );
           }),
     );

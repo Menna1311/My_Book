@@ -9,16 +9,25 @@ class CustomAppbarHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Image.asset(
-            Assets.logo,
-            height: 40,
-            color: const Color(0xFF4F2611),
-          ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.search))
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(top: 24.0, left: 24),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              Assets.logo,
+              height: 40,
+              color: const Color(0xFF4F2611),
+            ),
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.search,
+                  color: Color(0xFF4F2611),
+                  size: 30,
+                ))
+          ],
+        ),
       ),
     );
   }

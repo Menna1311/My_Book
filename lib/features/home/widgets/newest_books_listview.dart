@@ -11,9 +11,9 @@ class NewestBooksListview extends StatelessWidget {
     return ListView.builder(
         itemCount: 10,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(bottom: 24.0),
-            child: const NewestBooksItem(),
+          return const Padding(
+            padding: EdgeInsets.only(bottom: 24.0),
+            child: NewestBooksItem(),
           );
         });
   }
