@@ -1,5 +1,7 @@
-import 'package:books_remake/features/home/widgets/book_item.dart';
+import 'package:books_remake/core/utils/routes.dart';
+import 'package:books_remake/features/home/views/widgets/book_item.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BookItemListView extends StatelessWidget {
   const BookItemListView({super.key});
@@ -11,9 +13,13 @@ class BookItemListView extends StatelessWidget {
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return const Padding(
+            return Padding(
               padding: EdgeInsets.only(right: 24.0, left: 24, top: 20),
-              child: BookItem(),
+              child: GestureDetector(
+                  onTap: () {
+                    GoRouter.of(context).push(AppRoutes.detailsview);
+                  },
+                  child: BookItem()),
             );
           }),
     );

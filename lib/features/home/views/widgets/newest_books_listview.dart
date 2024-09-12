@@ -1,4 +1,4 @@
-import 'package:books_remake/features/home/widgets/newest_books_item.dart';
+import 'package:books_remake/features/home/views/widgets/newest_books_item.dart';
 import 'package:flutter/material.dart';
 
 class NewestBooksListview extends StatelessWidget {
@@ -9,6 +9,7 @@ class NewestBooksListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+        physics: NeverScrollableScrollPhysics(),
         itemCount: 10,
         itemBuilder: (context, index) {
           return const Padding(

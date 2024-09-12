@@ -1,4 +1,6 @@
+import 'package:books_remake/constant.dart';
 import 'package:books_remake/core/utils/styles.dart';
+import 'package:books_remake/features/home/views/widgets/rating_stars.dart';
 import 'package:flutter/material.dart';
 
 class NewestBooksItem extends StatelessWidget {
@@ -34,15 +36,7 @@ class NewestBooksItem extends StatelessWidget {
                   overflow: TextOverflow.ellipsis),
               Text('the author of the book', style: Styles.textStyle12),
               SizedBox(height: 4),
-              Row(
-                children: [
-                  Icon(Icons.star, color: Colors.blue, size: 20),
-                  Icon(Icons.star, color: Colors.blue, size: 20),
-                  Icon(Icons.star, color: Colors.blue, size: 20),
-                  Icon(Icons.star, color: Colors.blue, size: 20),
-                  Icon(Icons.star, color: Colors.blue, size: 20),
-                ],
-              ),
+              RatingStars()
             ],
           ),
         ),
@@ -52,7 +46,7 @@ class NewestBooksItem extends StatelessWidget {
               onPressed: () {},
               icon: const Icon(
                 Icons.add_shopping_cart,
-                color: Colors.blue,
+                color: kPrimarybuttonsColor,
               )),
         )
       ],
