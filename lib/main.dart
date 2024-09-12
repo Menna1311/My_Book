@@ -1,3 +1,4 @@
+import 'package:books_remake/bloc_observer.dart';
 import 'package:books_remake/constant.dart';
 import 'package:books_remake/core/utils/routes.dart';
 import 'package:books_remake/core/utils/service_locator.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
+  Bloc.observer = MyBlocObserver();
   setUpserviceLocator();
   runApp(const BookApp());
 }
@@ -20,15 +22,13 @@ class BookApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => NewestBooksCubit(
-            getit.get<HomeRepoImpl>(),
-          ),
-        ),
+            create: (context) => NewestBooksCubit(
+                  getit.get<HomeRepoImpl>(),
+                )..fetchNewestBooks()),
         BlocProvider(
-          create: (context) => FeaturedBoksCubit(
-            getit.get<HomeRepoImpl>(),
-          ),
-        )
+            create: (context) => FeaturedBoksCubit(
+                  getit.get<HomeRepoImpl>(),
+                )..fetchFeaturedBooks())
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,

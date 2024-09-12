@@ -1,4 +1,5 @@
 import 'package:books_remake/core/utils/styles.dart';
+import 'package:books_remake/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class BookItem extends StatelessWidget {
@@ -6,9 +7,11 @@ class BookItem extends StatelessWidget {
     this.widthFactor = 0.3,
     super.key,
     this.crossAxisAlignment = CrossAxisAlignment.start,
+    required this.book,
   });
   final double widthFactor;
   final CrossAxisAlignment crossAxisAlignment;
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,8 +22,8 @@ class BookItem extends StatelessWidget {
         children: [
           AspectRatio(
             aspectRatio: 2.5 / 4,
-            child: Image.asset(
-              'assets/images/test.jpg',
+            child: Image.network(
+              book.volumeInfo!.imageLinks!.thumbnail ?? '',
               fit: BoxFit.cover,
             ),
           ),

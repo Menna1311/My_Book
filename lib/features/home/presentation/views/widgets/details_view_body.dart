@@ -19,10 +19,10 @@ class DetailsViewBody extends StatelessWidget {
         const SizedBox(
           height: 40,
         ),
-        const BookItem(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          widthFactor: 0.5,
-        ),
+        // const BookItem(
+        //   crossAxisAlignment: CrossAxisAlignment.center,
+        //   widthFactor: 0.5,
+        // ),
         const RatingItem(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18.0),
