@@ -28,13 +28,20 @@ class BookItem extends StatelessWidget {
             ),
           ),
           // Add spacing between image and text
-          Text('Book Title', // Replace with dynamic title if needed
+          Text(
+              book.volumeInfo!.title ??
+                  '', // Replace with dynamic title if needed
               style: Styles.textStyle20.copyWith(
                 fontSize: 16,
-              )),
-          const Text(
-            'Book Title', // Replace with dynamic title if needed
+              ),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis),
+          Text(
+            book.volumeInfo!.authors![0] ??
+                '', // Replace with dynamic title if needed
             style: Styles.textStyle12,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
         ],
       ),

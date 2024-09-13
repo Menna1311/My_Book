@@ -16,13 +16,15 @@ class BookItemListView extends StatelessWidget {
           return SizedBox(
             height: MediaQuery.of(context).size.height * 0.3,
             child: ListView.builder(
+                itemCount: state.books.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: EdgeInsets.only(right: 24.0, left: 24, top: 20),
                     child: GestureDetector(
                         onTap: () {
-                          GoRouter.of(context).push(AppRoutes.detailsview);
+                          GoRouter.of(context).push(AppRoutes.detailsview,
+                              extra: state.books[index]);
                         },
                         child: BookItem(
                           book: state.books[index],
